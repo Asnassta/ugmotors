@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+	<title>ЮГМОТОРС</title>
+</head>
+<body>
+
+	<!--Sprite-->
+	<svg style="display: none;">
+		<symbol id="mail-icon" viewBox="0 0 24 24">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5332 5C1.98092 5 1.5332 5.44772 1.5332 6V17.6522C1.5332 18.2045 1.98092 18.6522 2.5332 18.6522H21.4665C22.0188 18.6522 22.4665 18.2045 22.4665 17.6522V6C22.4665 5.44772 22.0188 5 21.4665 5H2.5332ZM21.0643 6.82035L11.9999 12.2812L2.93547 6.82035H21.0643Z"/>
+			</g>
+		</symbol>
+		<symbol id="pin-icon" viewBox="0 0 24 24">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M12.0618 21C12.6586 21 19.2232 13.8159 19.2232 9.96774C19.2232 6.11956 16.0169 3 12.0618 3C8.10667 3 4.90039 6.11956 4.90039 9.96774C4.90039 13.8159 11.465 21 12.0618 21ZM11.9811 13.4516C13.9587 13.4516 15.5618 11.8918 15.5618 9.96776C15.5618 8.04367 13.9587 6.48389 11.9811 6.48389C10.0035 6.48389 8.40039 8.04367 8.40039 9.96776C8.40039 11.8918 10.0035 13.4516 11.9811 13.4516Z"/>
+			</g>
+		</symbol>
+		<symbol id="phone-icon" viewBox="0 0 24 24">
+			<g>
+				<path d="M19.204 14.2342C19.142 14.2039 16.8198 13.0413 16.4071 12.8904C16.2387 12.8288 16.0582 12.7688 15.8663 12.7688C15.5527 12.7688 15.2893 12.9277 15.0841 13.2398C14.8521 13.5903 14.1499 14.4249 13.933 14.6742C13.9046 14.7071 13.8659 14.7464 13.8428 14.7464C13.822 14.7464 13.4626 14.5959 13.3538 14.5479C10.8628 13.4477 8.97196 10.8021 8.71269 10.356C8.67567 10.2919 8.67411 10.2627 8.6738 10.2627C8.68291 10.2288 8.76667 10.1434 8.8099 10.0993C8.93638 9.97212 9.07341 9.80441 9.206 9.64217C9.26877 9.5653 9.33165 9.48834 9.39339 9.41578C9.58575 9.18825 9.67138 9.0116 9.77066 8.80699L9.82268 8.70068C10.0651 8.21101 9.85805 7.79779 9.79114 7.66436C9.73622 7.55269 8.75571 5.14673 8.65147 4.89396C8.40078 4.284 8.06953 4 7.60921 4C7.5665 4 7.60921 4 7.43009 4.00768C7.21198 4.01703 6.02422 4.17602 5.49906 4.51259C4.94215 4.86956 4 6.00746 4 8.00861C4 9.80966 5.12416 11.5102 5.60682 12.157C5.61881 12.1733 5.64084 12.2064 5.6728 12.2539C7.5212 14.9984 9.82548 17.0324 12.1614 17.9811C14.4102 18.8944 15.4751 19 16.0806 19C16.0807 19 16.0807 19 16.0807 19C16.3351 19 16.5387 18.9797 16.7183 18.9617L16.8323 18.9507C17.6092 18.8807 19.3164 17.9812 19.7048 16.884C20.0107 16.0198 20.0913 15.0756 19.8878 14.7329C19.7484 14.4999 19.5082 14.3827 19.204 14.2342Z"/>
+			</g>
+		</symbol>
+		<symbol id="slider-arrow" viewBox="0 0 75 116">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M74.9994 116H49.9806L0 58.0004L49.9812 0H75L25.0188 58.0004L74.9994 116Z"/>
+			</g>
+		</symbol>
+		<symbol id="whatsapp-icon" viewBox="0 0 16 15">
+			<g>
+				<path d="M11.5554 8.23618C11.5268 8.22278 10.4573 7.70821 10.2672 7.64138C10.1896 7.61416 10.1065 7.58759 10.0181 7.58759C9.87368 7.58759 9.75236 7.6579 9.65786 7.79603C9.55102 7.95118 9.22759 8.32055 9.12766 8.43089C9.11461 8.44546 9.09679 8.46286 9.08612 8.46286C9.07655 8.46286 8.91102 8.39627 8.86091 8.375C7.71359 7.88808 6.84272 6.71715 6.72331 6.51969C6.70625 6.4913 6.70554 6.47841 6.7054 6.47841C6.70959 6.46338 6.74817 6.42559 6.76808 6.40609C6.82633 6.34978 6.88945 6.27555 6.95051 6.20375C6.97943 6.16973 7.00839 6.13566 7.03682 6.10355C7.12542 6.00284 7.16486 5.92466 7.21059 5.8341L7.23455 5.78705C7.3462 5.57032 7.25084 5.38743 7.22002 5.32838C7.19473 5.27895 6.74312 4.21408 6.69511 4.1022C6.57965 3.83224 6.42708 3.70654 6.21507 3.70654C6.19539 3.70654 6.21507 3.70654 6.13257 3.70994C6.03211 3.71408 5.48505 3.78445 5.24317 3.93341C4.98667 4.09141 4.55273 4.59504 4.55273 5.48074C4.55273 6.27788 5.0705 7.03053 5.2928 7.31678C5.29833 7.324 5.30847 7.33866 5.32319 7.35969C6.17453 8.57441 7.23583 9.47463 8.31171 9.89454C9.34748 10.2988 9.83795 10.3455 10.1168 10.3455C10.1168 10.3455 10.1168 10.3455 10.1168 10.3455C10.234 10.3455 10.3278 10.3365 10.4105 10.3286L10.463 10.3237C10.8209 10.2927 11.6072 9.89459 11.786 9.40897C11.9269 9.02648 11.9641 8.60857 11.8703 8.45691C11.8061 8.35378 11.6955 8.30189 11.5554 8.23618Z"/>
+				<path d="M8.16876 0C4.19544 0 0.962902 3.13449 0.962902 6.98728C0.962902 8.23342 1.30424 9.45321 1.95085 10.5208L0.713212 14.0876C0.690158 14.1542 0.707306 14.2277 0.757653 14.2778C0.793997 14.314 0.843297 14.3336 0.893644 14.3336C0.912936 14.3336 0.93237 14.3307 0.951327 14.3248L4.75813 13.1429C5.79985 13.6867 6.97723 13.9738 8.16881 13.9738C12.1418 13.9738 15.374 10.8397 15.374 6.98728C15.374 3.13449 12.1418 0 8.16876 0ZM8.16876 12.5183C7.04754 12.5183 5.96156 12.202 5.02806 11.6035C4.99667 11.5834 4.96023 11.573 4.92355 11.573C4.90417 11.573 4.88473 11.5759 4.86582 11.5818L2.95885 12.174L3.57446 10.3996C3.59437 10.3422 3.58441 10.2788 3.54773 10.2299C2.83686 9.28088 2.46109 8.15965 2.46109 6.98728C2.46109 3.93707 5.02153 1.45551 8.16872 1.45551C11.3155 1.45551 13.8757 3.93707 13.8757 6.98728C13.8757 10.0371 11.3156 12.5183 8.16876 12.5183Z"/>
+			</g>
+		</symbol>
+		<symbol id="tg-icon" viewBox="0 0 15 13">
+			<g>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.287822 5.32252L13.8327 0.0314999C14.1725 -0.100649 14.5207 0.203735 14.4352 0.558159L12.3737 11.7503C12.2817 12.1315 11.8277 12.2917 11.5169 12.0526L8.28127 9.56364L6.30942 11.2068C5.85799 11.6583 5.40656 11.6583 5.40656 11.6583L5.75847 8.13923L12.0248 2.29063C12.0968 2.22344 12.01 2.10991 11.9263 2.16175L3.72451 7.23905L0.316791 6.17413C-0.0907198 6.04679 -0.110093 5.47726 0.287822 5.32252Z"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<div class="wrapper">
+		<header class="header header-abs">
+			<div class="container">
+				<div class="header__inner">
+					<a href="#" class="header__logo logo">
+						<img src="assets/images/logo.svg" alt="">
+					</a>
+					<div class="header__menu">
+						<nav class="header__nav">
+							<a href="#" class="header__link">Главная</a>
+							<a href="#" class="header__link">Автомобили</a>
+							<a href="#" class="header__link">О компании</a>
+							<a href="#" class="header__link">Контакты</a>
+							<a href="#" class="header__link">Статьи</a>
+						</nav>
+						<div class="header__contact">
+							<div class="header__social social">
+								<a href="#" class="social-icon">
+									<svg>
+										<use xlink:href="#tg-icon"></use>
+									</svg>
+								</a>
+								<a href="#" class="social-icon">
+									<svg>
+										<use xlink:href="#whatsapp-icon"></use>
+									</svg>
+								</a>
+							</div>
+							<a href="tel:+79999999999" class="header__phone">+7 (999) 999 99 99</a>
+							<div class="header__description">08:00 - 20:00</div>
+						</div>
+						<a href="#" class="header__menu-close"></a>
+					</div>
+					<div class="burger">
+						<div class="burger__item"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="main">
+			<section class="intro section">
+				<div class="container">
+					<div class="intro__inner">
+						<div class="intro__info">
+							<h1 class="title">Автосервис <span>toyota</span> и <span>lexus</span></h1>
+							<div class="description">Мы имеем большой опыт в ремонте автомобилей Lexus и Toyota. Запишитесь в наш автосервис и мы решим проблему с Вашим автомобилем</div>
+							<a href="#" class="btn">записаться</a>
+						</div>
+						<div class="intro__photo">
+							<img src="assets/images/car_1.png" alt="">
+						</div>
+					</div>
+				</div>
+			</section><!--/intro-->
+			<section class="choice section">
+				<div class="container">
+					<div class="choice__inner">
+						<div class="info-box">
+							<h2 class="title decor-dots">Выберите <span>марку</span> и <span>модель</span> автомобиля</h2>
+							<div class="description">Для ознакомления с информацией по типам технического осмотра, обслуживанию и оказыванию услуг для автомобиля</div>
+							<a href="#" class="link">Полный список автомобилей</a>
+						</div>
+						<div class="slider-arrows">
+							<div class="slider-arrow slider-arrow_prev">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_next">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="choice-slider">
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_2.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>LX570</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_3.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>GX540</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_4.png" alt="">
+								</div>
+								<div class="choice-slider__title">Toyota</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Toyota <span>land cruiser 270</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_2.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>LX570</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_3.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>GX540</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_4.png" alt="">
+								</div>
+								<div class="choice-slider__title">Toyota</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Toyota <span>land cruiser 270</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_2.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>LX570</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_3.png" alt="">
+								</div>
+								<div class="choice-slider__title">lexus</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Lexus <span>GX540</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+						<div class="choice-slider__slide">
+							<div class="choice-slider__item">
+								<div class="choice-slider__photo">
+									<img src="assets/images/car_4.png" alt="">
+								</div>
+								<div class="choice-slider__title">Toyota</div>
+								<a href="#" class="choice-slider__info">
+									<div class="choice-slider__name">Toyota <span>land cruiser 270</span> </div>
+									<span class="choice-slider__link">Открыть</span>
+								</a>
+							</div>
+						</div><!--/choice-slider__slide-->
+					</div><!--/choice-slider-->
+				</div>
+			</section><!--/choice-->
+			<section class="contact section">
+				<div class="container">
+					<div class="contact__inner">
+						<div class="contact__photo">
+							<img src="assets/images/car_2.png" alt="">
+						</div>
+						<div class="contact__info">
+							<h2 class="title decor-dots decor-dots_right"><span>Запись в автосервис</span> или консультанция</h2>
+							<div class="description">Отправьте свой номер телефона и наш оператор позвонит Вам в ближайшее время для записи или консультации </div>
+							<div class="contact__row">
+								<a href="tel:+79999999999" class="contact__link">+7 (999) 999 99 99</a>
+								<a href="#" class="btn">отправить</a>
+								<div class="social">
+									<a href="#" class="social-icon">
+										<svg>
+											<use xlink:href="#tg-icon"></use>
+										</svg>
+									</a>
+									<a href="#" class="social-icon">
+										<svg>
+											<use xlink:href="#whatsapp-icon"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section><!--/contact-->
+			<section class="about section">
+				<div class="container">
+					<div class="about__inner">
+						<div class="info-box">
+							<h2 class="title decor-dots">О компании <span><span class="title_red">ЮГ</span>моторс</span> автомобиля</h2>
+							<div class="description">Для ознакомления с информацией по обслуж иванию автомо биля, типам и ТО и оказываемыми услугами с информ аци ей по обслуживанию автом о бил я, типами ТО и оказыв аемыми услу га м и с информацией по обс лу живанию автомобиля, тип автомобиля, тип</div>
+							<a href="#" class="link">Читать полностью</a>
+						</div>
+						<div class="slider-arrows">
+							<div class="slider-arrow slider-arrow_prev">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_next">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container container_full">
+					<div class="about-slider">
+						<div class="about-slider__slide">
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_1.png" alt="">
+							</div>
+						</div><!--/about-slider__slide-->
+						<div class="about-slider__slide">
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_2.png" alt="">
+							</div>
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_3.png" alt="">
+							</div>
+						</div><!--/about-slider__slide-->
+						<div class="about-slider__slide">
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_4.png" alt="">
+							</div>
+						</div><!--/about-slider__slide-->
+						<div class="about-slider__slide">
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_1.png" alt="">
+							</div>
+						</div><!--/about-slider__slide-->
+						<div class="about-slider__slide">
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_2.png" alt="">
+							</div>
+							<div class="about-slider__item">
+								<img src="assets/images/service-photo_3.png" alt="">
+							</div>
+						</div><!--/about-slider__slide-->
+					</div><!--/about-slider-->
+				</div>
+			</section><!--/about-->
+			<section class="team section">
+				<div class="container">
+					<div class="team__inner">
+						<div class="info-box">
+							<h2 class="title decor-dots">Знакомьтесь, наша <span>команда специалистов</span></h2>
+							<div class="description">В нашей компании трудится большое количество профессионалов, готовых решить любые проблемы Вашего автомобиля</div>
+						</div>
+						<div class="slider-arrows">
+							<div class="slider-arrow slider-arrow_prev">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_next">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="team-slider">
+						<div class="team-slider__slide">
+							<div class="team__item">
+								<div class="team__photo">
+									<img src="assets/images/team-photo_1.png" alt="">
+								</div>
+								<div class="team__info">
+									<div class="team__name">Александр Ерхозов</div>
+									<div class="team__role">Главный директор</div>
+									<div class="team__description">Автобиля, типами ТО и оказ ыв аем ым и услу га ми с инфр мацие   ми с инфр мацие  </div>
+								</div>
+							</div><!--/team__item-->
+						</div><!--/team-slider__slide-->
+						<div class="team-slider__slide">
+							<div class="team__item">
+								<div class="team__photo">
+									<img src="assets/images/team-photo_2.png" alt="">
+								</div>
+								<div class="team__info">
+									<div class="team__name">Евгения полуклинникова</div>
+									<div class="team__role">Специалист по рекламе</div>
+									<div class="team__description">Автобиля, типами ТО и оказ ыв аем ым и услу га ми с инфр мацие   ми с инфр мацие </div>
+								</div>
+							</div><!--/team__item-->
+						</div><!--/team-slider__slide-->
+						<div class="team-slider__slide">
+							<div class="team__item">
+								<div class="team__photo">
+									<img src="assets/images/team-photo_1.png" alt="">
+								</div>
+								<div class="team__info">
+									<div class="team__name">Александр Ерхозов</div>
+									<div class="team__role">Главный директор</div>
+									<div class="team__description">Автобиля, типами ТО и оказ ыв аем ым и услу га ми с инфр мацие   ми с инфр мацие  </div>
+								</div>
+							</div><!--/team__item-->
+						</div><!--/team-slider__slide-->
+						<div class="team-slider__slide">
+							<div class="team__item">
+								<div class="team__photo">
+									<img src="assets/images/team-photo_2.png" alt="">
+								</div>
+								<div class="team__info">
+									<div class="team__name">Евгения полуклинникова</div>
+									<div class="team__role">Специалист по рекламе</div>
+									<div class="team__description">Автобиля, типами ТО и оказ ыв аем ым и услу га ми с инфр мацие   ми с инфр мацие </div>
+								</div>
+							</div><!--/team__item-->
+						</div><!--/team-slider__slide-->
+					</div><!--/team-slider-->
+				</div>
+			</section><!--/team-->
+			<section class="news">
+				<div class="container">
+					<div class="news__inner">
+						<div class="info-box">
+							<h2 class="title decor-dots">Статьи и новости</h2>
+							<div class="description">Интересные статьи и последние новости смотрите в этом разделе</div>
+							<a href="#" class="link">Перейти к разделу</a>
+						</div>
+						<div class="slider-arrows">
+							<div class="slider-arrow slider-arrow_prev">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+							<div class="slider-arrow slider-arrow_next">
+								<svg>
+									<use xlink:href="#slider-arrow"></use>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="news-slider">
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_1.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_2.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_3.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_1.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_2.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+						<div class="news-slider__slide">
+							<a href="#" class="news__item">
+								<div class="news__photo">
+									<img src="assets/images/news-photo_3.png" alt="">
+								</div>
+								<div class="news__info">
+									<h3 class="news__title">Как правильно покупать  автомобиль на сайтах объявлений?</h3>
+									<div class="news__description">В этой статье вы найдете все основные пункты покупки автомобиля из обявления осн овные пункты покупки автомобиля из обявления основные пункты  основные пункты </div>
+								</div>
+							</a><!--/news__item-->
+						</div><!--/news-slider__slide-->
+					</div><!--/news-slider-->
+				</div>
+			</section><!--/news-->
+		</main>
+		<footer class="footer">
+			<div class="footer__inner">
+				<div class="container">
+					<a href="#" class="footer__logo logo">
+						<img src="assets/images/logo.svg" alt="">
+					</a>
+					<div class="footer__menu">
+						<div class="footer__col">
+							<h4 class="footer__title">Навигация по сайту</h4>
+							<ul class="footer__list">
+								<li>
+									<a href="#" class="footer__link">Главная</a>
+								</li>
+								<li>
+									<a href="#" class="footer__link">Автомобили</a>
+								</li>
+								<li>
+									<a href="#" class="footer__link">Обратный звонок</a>
+								</li>
+								<li>
+									<a href="#" class="footer__link">О компании</a>
+								</li>
+								<li>
+									<a href="#" class="footer__link">Статьи</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<h4 class="footer__title">Контакты</h4>
+							<ul class="footer__list">
+								<li>
+									<a href="tel:+79999999999" class="footer__link">+7 (999) 999 99 99</a>
+								</li>
+								<li>
+									<a href="#" class="footer__link">ул. Депутатская, д.3</a>
+								</li>
+								<li>
+									<a href="mailto:yugmotors@mail.ru" class="footer__link">yugmotors@mail.ru</a>
+								</li>
+							</ul>
+						</div>
+						<div class="footer__col">
+							<h4 class="footer__title">Связь через мессенджер</h4>
+							<div class="footer__description">Для Вашего удобства, можете связаться с нами через мессенджеры</div>
+							<div class="footer__social social">
+							<a href="#" class="social-icon">
+								<svg>
+									<use xlink:href="#tg-icon"></use>
+								</svg>
+							</a>
+							<a href="#" class="social-icon">
+								<svg>
+									<use xlink:href="#whatsapp-icon"></use>
+								</svg>
+							</a>
+						</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__foot">
+				<div class="container">
+					<div class="footer__row">
+						<div class="footer__copyright">© Региональная сеть автокомплексов Югмоторс, 2022</div>
+						<a href="#" class="footer__policy">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="assets/js/jquery-3.6.0.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/script.js"></script>
+	
+</body>
+</html>

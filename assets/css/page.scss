@@ -599,4 +599,15 @@
 		}
 	}
 }
+
+@media(max-width: 400px) {
+	.footer {
+		&__copyright {
+			font-size: 12px;
+		}
+		&__policy {
+			font-size: 12px;
+		}
+	}
+}
 /*=============/adaptive========*/

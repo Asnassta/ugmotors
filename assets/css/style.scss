@@ -1921,7 +1921,14 @@ body.hidden {
 @media(max-width: 860px) {
 	.selection {
 		&__inner {
-			flex-direction: column;
+			&.wrap {
+				flex-direction: column;
+				.info-box {
+					max-width: 100%;
+					margin-right: 0;
+					margin-bottom: 30px;
+				}
+			}
 		}
 		&__col {
 			display: flex;
@@ -1934,11 +1941,6 @@ body.hidden {
 			&:last-child {
 				margin-right: 0;
 			}
-		}
-		.info-box {
-			max-width: 100%;
-			margin-right: 0;
-			margin-bottom: 30px;
 		}
 	}
 	.article {
@@ -2216,7 +2218,7 @@ body.hidden {
 
 	.selection {
 		&__title {
-			margin: 35px 0;
+			margin: 10px 0 35px;
 		}
 		&__col {
 			align-items: center;

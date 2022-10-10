@@ -581,7 +581,7 @@ body.hidden {
 	}
 	&-black {
 		.contact__photo {
-			background: url("../images/bg-black_2.png") center left no-repeat;
+			background: url("../images/bg-black_2.png") center right no-repeat;
 			background-size: cover;
 			img {
 				margin-left: -18%;
@@ -621,7 +621,7 @@ body.hidden {
 		display: inline-block;
 		font-family: $ff;
 		font-size: 16px;
-		font-weight: 600;
+		font-weight: 500;
 		line-height: $lh;
 		color: $gray2;
 		padding:  0 5px 5px;

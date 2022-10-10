@@ -440,6 +440,14 @@
 
 /*==========/footer==========*/
 /*==============Adaptive========*/
+@media (min-width: 2200px) {
+  .header:after {
+    width: 62%; } }
+
+@media (max-width: 1600px) {
+  .header:after {
+    width: 45%; } }
+
 @media (max-width: 1024px) {
   .header__inner {
     -webkit-box-pack: start;
@@ -1170,7 +1178,7 @@ body.hidden {
     right: 16%;
     z-index: -1; }
   .contact-black .contact__photo {
-    background: url("../images/bg-black_2.png") center left no-repeat;
+    background: url("../images/bg-black_2.png") center right no-repeat;
     background-size: cover; }
     .contact-black .contact__photo img {
       margin-left: -18%; }
@@ -1207,7 +1215,7 @@ body.hidden {
     display: inline-block;
     font-family: "Rubik", sans-serif;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.5;
     color: #97A2B6;
     padding: 0 5px 5px;

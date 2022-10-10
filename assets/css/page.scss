@@ -432,6 +432,20 @@
 
 
 /*==============Adaptive========*/
+@media(min-width: 2200px) {
+	.header {
+		&:after {
+			width: 62%;
+		}
+	}
+}
+@media(max-width: 1600px) {
+	.header {
+		&:after {
+			width: 45%;
+		}
+	}
+}
 @media(max-width: 1024px) {
 	.header {
 		&__inner {

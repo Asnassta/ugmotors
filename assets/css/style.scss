@@ -124,6 +124,12 @@ body.hidden {
 	@media(max-width: 1920px) {
 		@include adaptiv-font(16, 14);
 	}
+	p {
+		margin-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .btn {
@@ -1650,6 +1656,105 @@ body.hidden {
 }
 /*========/article===========*/
 
+/*========About-block=========*/
+.about-block {
+	margin-top: -50px;
+	position: relative;
+	min-height: 500px;
+	display: flex;
+	align-items: center;
+	.description {
+		font-size: 14px;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+	&__info {
+		width: 48%;
+		padding: 50px 0 50px 0;
+	}
+	&__photo {
+		width: 52%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+		height: 100%;
+		overflow: hidden;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center left;
+		}
+		&:before {
+			content: "";
+			width: 12%;
+			height: 100%;
+			transform: skew(-16deg);
+			background-color: $wh;
+			position: absolute;
+			top: 0;
+			left: 3%;
+			z-index: 1;
+		}
+		&:after {
+			content: "";
+			width: 25%;
+			height: 100%;
+			transform: skew(-16deg);
+			background-color: $wh;
+			position: absolute;
+			top: 0;
+			left: -15%;
+			z-index: 1;
+		}
+	}
+	&__box {
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.title {
+			margin-bottom: 25px;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		svg {
+			width: 24px;
+			height: 24px;
+			fill: $bl;
+			line-height: $lh;
+			margin-right: 10px;
+			transition: all .2s linear;
+		}
+		span {
+			font-family: $ff;
+			font-size: 16px;
+			font-weight: 400;
+			color: $bl;
+			line-height: $lh;
+			transition: all .2s linear;
+		}
+		&:hover {
+			svg {
+				fill: $red;
+			}
+			span {
+				color: $red;
+			}
+		}
+	}
+}
+/*========/about-block=========*/
+
 
 /*===============Adaptive============*/
 @media(min-width: 2200px) {
@@ -1780,6 +1885,19 @@ body.hidden {
 		&__name {
 			font-size: 45px;
 			padding-bottom: 10px;
+		}
+	}
+
+	.about-block {
+		&__photo {
+			&:before {
+				width: 18.5%;
+				left: 0;
+			}
+			&:after {
+				width: 20%;
+				left: -18.5%;
+			}
 		}
 	}
 }
@@ -1914,6 +2032,34 @@ body.hidden {
 		&__title {
 			font-size: 16px;
 			margin-bottom: 15px;
+		}
+	}
+
+	.about-block {
+		margin-top: 0;
+		&__inner {
+			display: block;
+		}
+		&__info {
+			width: 100%;
+			padding: 0 0 20px;
+		}
+		&__photo {
+			position: relative;
+			width: calc(100% + 30px);
+			margin-left: -15px;
+			margin-right: -15px;
+			//height: 350px;
+			&:before {
+				left: auto;
+				right: 0;
+				transform: skew(10deg);
+			}
+			&:after {
+				left: auto;
+				right: -18.5%;
+				transform: skew(10deg);
+			}
 		}
 	}
 }
@@ -2286,6 +2432,9 @@ body.hidden {
 	}
 	.description {
 		margin-bottom: 15px;
+		p {
+			margin-bottom: 15px;
+		}
 	}
 	.slider-arrow {
 		svg {
